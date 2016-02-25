@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51207EF21C7F7B800027E31D /* APIServicesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51207EF11C7F7B800027E31D /* APIServicesEnum.swift */; };
 		5135215B1C7F7210008A2040 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5135215A1C7F7210008A2040 /* APIKeys.swift */; };
+		516755741C7F8305000D46C1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516755731C7F8305000D46C1 /* File.swift */; };
 		51942B331C79D70400DEE8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51942B321C79D70400DEE8D1 /* AppDelegate.swift */; };
 		51942B351C79D70400DEE8D1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51942B341C79D70400DEE8D1 /* FirstViewController.swift */; };
 		51942B371C79D70400DEE8D1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51942B361C79D70400DEE8D1 /* SecondViewController.swift */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		51207EF11C7F7B800027E31D /* APIServicesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServicesEnum.swift; sourceTree = "<group>"; };
 		5135215A1C7F7210008A2040 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		516755731C7F8305000D46C1 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		51942B2F1C79D70400DEE8D1 /* encrypter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encrypter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51942B321C79D70400DEE8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51942B341C79D70400DEE8D1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				51942B901C79FB1800DEE8D1 /* String+AES.swift */,
 				5135215A1C7F7210008A2040 /* APIKeys.swift */,
+				516755731C7F8305000D46C1 /* File.swift */,
 			);
 			name = APIKeys;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				51942B6A1C79E17200DEE8D1 /* FileChooserTableViewController.swift in Sources */,
 				51942B331C79D70400DEE8D1 /* AppDelegate.swift in Sources */,
 				5135215B1C7F7210008A2040 /* APIKeys.swift in Sources */,
+				516755741C7F8305000D46C1 /* File.swift in Sources */,
 				51942B351C79D70400DEE8D1 /* FirstViewController.swift in Sources */,
 				51207EF21C7F7B800027E31D /* APIServicesEnum.swift in Sources */,
 			);
