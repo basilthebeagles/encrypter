@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Helvetica.ttc">
@@ -22,12 +23,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-Ox-6i9">
-                                <rect key="frame" x="180" y="28" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSH-9Q-vqn">
+                                <rect key="frame" x="223" y="20" width="154" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="CHZ-HX-rmr"/>
+                                </constraints>
+                                <state key="normal" title="Choose File"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-Ij-2DL">
+                                <rect key="frame" x="223" y="298" width="154" height="30"/>
+                                <state key="normal" title="Encrypt"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uV4-Yd-lod">
+                                <rect key="frame" x="180" y="58" width="240" height="224"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="kng-Sm-WAx"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deleteFileCell" id="4X7-Qc-xPB">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4X7-Qc-xPB" id="Q8C-87-b84">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete File after encryption?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-W8-j5G">
+                                                    <rect key="frame" x="8" y="14" width="160" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLl-oL-OBB">
+                                                    <rect key="frame" x="183" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PLl-oL-OBB" firstAttribute="leading" secondItem="Y2d-W8-j5G" secondAttribute="trailing" constant="15" id="NPP-ES-uuW"/>
+                                                <constraint firstItem="Y2d-W8-j5G" firstAttribute="leading" secondItem="Q8C-87-b84" secondAttribute="leadingMargin" id="Ry9-Tq-gUA"/>
+                                                <constraint firstItem="Y2d-W8-j5G" firstAttribute="top" secondItem="Q8C-87-b84" secondAttribute="topMargin" constant="6" id="Ttk-Un-wrh"/>
+                                                <constraint firstItem="PLl-oL-OBB" firstAttribute="top" secondItem="Q8C-87-b84" secondAttribute="topMargin" constant="-2" id="TzG-7u-TnG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PLl-oL-OBB" secondAttribute="bottom" constant="-1.5" id="aSF-34-IK8"/>
+                                                <constraint firstItem="PLl-oL-OBB" firstAttribute="trailing" secondItem="Q8C-87-b84" secondAttribute="trailingMargin" id="cSb-n6-tVr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Y2d-W8-j5G" secondAttribute="bottom" constant="7" id="lrq-45-S29"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="passcodeCell" id="1EJ-zt-Vzr">
+                                        <rect key="frame" x="0.0" y="72" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1EJ-zt-Vzr" id="tZM-Vb-Pd0">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKL-4e-kzO">
+                                                    <rect key="frame" x="8" y="7" width="224" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TKL-4e-kzO" secondAttribute="bottom" constant="-1.5" id="BDo-eH-w6t"/>
+                                                <constraint firstItem="TKL-4e-kzO" firstAttribute="top" secondItem="tZM-Vb-Pd0" secondAttribute="topMargin" constant="-1" id="PJi-Do-kPN"/>
+                                                <constraint firstItem="TKL-4e-kzO" firstAttribute="leading" secondItem="tZM-Vb-Pd0" secondAttribute="leadingMargin" id="X03-Wj-RIZ"/>
+                                                <constraint firstItem="TKL-4e-kzO" firstAttribute="trailing" secondItem="tZM-Vb-Pd0" secondAttribute="trailingMargin" id="a9Z-I9-ecK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XSH-9Q-vqn" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="7xM-4n-UdJ"/>
+                            <constraint firstItem="HlD-Ij-2DL" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="8fT-lu-mGc"/>
+                            <constraint firstItem="HlD-Ij-2DL" firstAttribute="top" secondItem="uV4-Yd-lod" secondAttribute="bottom" constant="16" id="LT9-q0-rCt"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="HlD-Ij-2DL" secondAttribute="bottom" constant="223" id="Paa-qe-AyC"/>
+                            <constraint firstItem="uV4-Yd-lod" firstAttribute="top" secondItem="XSH-9Q-vqn" secondAttribute="bottom" constant="8" symbolic="YES" id="SSq-P7-2Kb"/>
+                            <constraint firstItem="XSH-9Q-vqn" firstAttribute="trailing" secondItem="HlD-Ij-2DL" secondAttribute="trailing" id="dLY-Hx-NM9"/>
+                            <constraint firstItem="uV4-Yd-lod" firstAttribute="top" secondItem="XSH-9Q-vqn" secondAttribute="bottom" constant="8" id="jZp-uD-4O1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XSH-9Q-vqn" secondAttribute="trailing" constant="203" id="k9d-10-lcy"/>
+                            <constraint firstItem="HlD-Ij-2DL" firstAttribute="leading" secondItem="XSH-9Q-vqn" secondAttribute="leading" id="u4r-fb-hVP"/>
+                            <constraint firstItem="uV4-Yd-lod" firstAttribute="centerX" secondItem="XSH-9Q-vqn" secondAttribute="centerX" id="zlj-6k-6Ir"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jZp-uD-4O1"/>
+                                <exclude reference="k9d-10-lcy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                 </viewController>

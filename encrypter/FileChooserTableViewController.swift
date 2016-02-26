@@ -27,7 +27,6 @@ class FileChooserTableViewController: UITableViewController {
     
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +36,7 @@ class FileChooserTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         
     }
     
@@ -99,6 +99,7 @@ class FileChooserTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+*/
 */
 }
+

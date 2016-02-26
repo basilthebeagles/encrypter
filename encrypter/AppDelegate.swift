@@ -5,6 +5,7 @@
 //  Created by JohnJoe Stack on 21/02/2016.
 //  Copyright © 2016 FStack. All rights reserved.
 //
+import SwiftyDropbox
 
 import UIKit
 
@@ -16,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var apiKeysObject = APIKeys()
+        let dropboxAppKeychain = apiKeysObject.getKeyChain(APIServices.dropbox)
+        
+        Dropbox.setupWithAppKey(dropboxAppKeychain[1])
+        
                 return true
     }
 
