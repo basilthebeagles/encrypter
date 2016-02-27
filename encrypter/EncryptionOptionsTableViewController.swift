@@ -6,10 +6,9 @@
 //  Copyright © 2016 FStack. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class EncryptionOptionsTableViewController: UITableViewDelegate, UITableViewDataSource {
+class EncryptionOptionsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
  
 
@@ -20,25 +19,25 @@ class EncryptionOptionsTableViewController: UITableViewDelegate, UITableViewData
 
 
 
- func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
 }
 
- func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 // returns the number of rows in a section to the delegate.
     return 2
 }
 
+ 
 
-
- func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell: UITableViewCell
     
     print("section 0")
     if indexPath.row == 0{
         
         
-        cell = tableView.dequeueReusableCellWithIdentifier("disableAdvertsCell", forIndexPath: indexPath)
+        cell = tableView.dequeueReusableCellWithIdentifier("deleteFileCell", forIndexPath: indexPath)
     }else{
         cell = tableView.dequeueReusableCellWithIdentifier("passcodeCell", forIndexPath: indexPath)
     }
