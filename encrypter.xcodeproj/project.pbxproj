@@ -23,6 +23,8 @@
 		51942B6A1C79E17200DEE8D1 /* FileChooserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51942B691C79E17200DEE8D1 /* FileChooserTableViewController.swift */; };
 		51942B8F1C79F88F00DEE8D1 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51942B841C79F78400DEE8D1 /* CryptoSwift.framework */; };
 		51942B911C79FB1800DEE8D1 /* String+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51942B901C79FB1800DEE8D1 /* String+AES.swift */; };
+		51D84E3E1C83113C00A06C4B /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51942B841C79F78400DEE8D1 /* CryptoSwift.framework */; };
+		51D84E3F1C83113C00A06C4B /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51942B841C79F78400DEE8D1 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDD62BEAA1AEAAEE0B99A46B /* Pods_encrypter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9D850EFD2C9EF20F859874 /* Pods_encrypter.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +85,28 @@
 			remoteGlobalIDString = 754BE45419693E190098E6F3;
 			remoteInfo = "CryptoSwift iOS";
 		};
+		51D84E401C83113C00A06C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51942B7B1C79F78400DEE8D1 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = "CryptoSwift iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51D84E421C83113C00A06C4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51D84E3F1C83113C00A06C4B /* CryptoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		510EB9BA1C80DFA3001DFCD9 /* EncryptionOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionOptionsTableViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +145,7 @@
 				51942B8F1C79F88F00DEE8D1 /* CryptoSwift.framework in Frameworks */,
 				51942B631C79D73100DEE8D1 /* StoreKit.framework in Frameworks */,
 				EDD62BEAA1AEAAEE0B99A46B /* Pods_encrypter.framework in Frameworks */,
+				51D84E3E1C83113C00A06C4B /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +287,13 @@
 				51942B2D1C79D70400DEE8D1 /* Resources */,
 				68F98FD095638F109ABC1CB4 /* Embed Pods Frameworks */,
 				BC346910DAE6C2D1A186241A /* Copy Pods Resources */,
+				51D84E421C83113C00A06C4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				51942B8E1C79F87000DEE8D1 /* PBXTargetDependency */,
+				51D84E411C83113C00A06C4B /* PBXTargetDependency */,
 			);
 			name = encrypter;
 			productName = encrypter;
@@ -529,6 +555,11 @@
 			name = "CryptoSwift iOS";
 			targetProxy = 51942B8D1C79F87000DEE8D1 /* PBXContainerItemProxy */;
 		};
+		51D84E411C83113C00A06C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CryptoSwift iOS";
+			targetProxy = 51D84E401C83113C00A06C4B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -639,6 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = encrypter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +688,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = encrypter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

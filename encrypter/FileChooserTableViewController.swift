@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FileChooserTableViewController: UITableViewController {
+class ServiceChooserTableViewController: UITableViewController {
 /*
     override func viewDidLoad() {
         super.viewDidLoad()
